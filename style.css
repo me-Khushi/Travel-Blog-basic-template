@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+/* Navbar formatting */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(121, 16, 16, 0.603);
+  box-shadow: 0 4px 5px rgb(89, 44, 44);
+}
+.navbar nav ul {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.navbar ul li {
+  padding: 4vw;
+}
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: aliceblue;
+}
+/* Hero section formatting */
+.hero {
+  background-image: url(assets/images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 7px;
+}
+.hero p {
+  font-size: 1.5rem;
+  color: white;
+  margin: 20px;
+}
+.hero button {
+  margin-top: 43px;
+  padding: 10px;
+  width: 15%;
+  border: 2px solid black;
+  border-radius: 6px;
+  box-shadow: 2px 0 5px;
+  cursor: pointer;
+}
+.hero button:hover {
+  background-color: #bcc3ca;
+}
+
+/* Formatting of Cards Section */
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+.card {
+  height: 40vh;
+  width: 28vw;
+  margin: 15px;
+  padding: 12px;
+  border-radius: 7px;
+  box-shadow: 0 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card1 {
+  background-image: url(assets/images/card1.jpg);
+}
+.card2 {
+  background-image: url(assets/images/card2.jpg);
+}
+.card3 {
+  background-image: url(assets/images/Card3.jpeg);
+}
+.content {
+  background-color: rgba(255, 255, 255, 0.618);
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  min-height: 35vh;
+  max-height: 50vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  text-align: justify;
+  margin: 10px 0;
+}
+.content button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.content button:hover {
+  background-color: #0056b3;
+}
+/* Footer Styling */
+.foot {
+  background-color: rgba(227, 161, 8, 0.831);
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.side1 h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.side1 pre {
+  font-size: 1rem;
+  padding: 5px;
+}
+.side2 {
+  display: flex;
+  gap: 20px;
+}
+.side2 img {
+  width: 40px;
+  height: 40px;
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .navbar ul li {
+    padding: 2vw;
+  }
+  /* hero section */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero button {
+    width: 50%;
+  }
+  /* Card section */
+  .card {
+    width: 80%;
+    height: auto;
+  }
+  .content {
+    min-height: 45vh;
+  }
+  /* footer section */
+  .foot {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .side1 h3 {
+    font-size: 1.3rem;
+  }
+
+  .side1 pre {
+    font-size: 0.9rem;
+  }
+
+  .side2 {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .side2 img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    min-height: 35vh;
+  }
+
+  .side1 h3 {
+    font-size: 1rem;
+  }
+
+  .side1 pre {
+    font-size: 0.8rem;
+  }
+
+  .side2 img {
+    width: 25px;
+    height: 25px;
+  }
+}
